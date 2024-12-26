@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream-UI Quick Website Fetcher</title>
+    <!-- Link to static CSS file -->
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-img">
+            <!-- Directly reference image from static folder -->
+            <img src="{{ url_for('static', filename='dreamup.png') }}" alt="logo">
+        </div>
+        <ul class="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="heading">Dream-UI Quick Website Fetcher</h1>
+        
+        <form action="/download" method="POST">
+            <div class="search-box">
+                <input type="text" name="url" placeholder="Paste Website URL" required>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="downloadType" value="images" required> Images</label>
+                <label><input type="radio" name="downloadType" value="videos"> Videos</label>
+                <label><input type="radio" name="downloadType" value="code"> Code</label>
+                <label><input type="radio" name="downloadType" value="all" checked> All</label>
+            </div>
+            <button type="submit" class="btn-download">Download</button>
+        </form>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Dreem UI. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

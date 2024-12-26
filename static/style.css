@@ -1,0 +1,177 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/gbcurunt.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes full viewport height */
+}
+
+.navbar {
+    background-color: rgba(92, 92, 92, 0.164); /* 50% transparent */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    margin: 10px; /* Space above and below */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.26);
+    border: #bbb solid 1px;
+}
+
+.navbar-img img {
+    height: 40px;
+    width: auto;
+    padding-left: 20px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-right: 20px;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #ff0000;
+}
+
+.container {
+    flex: 1; /* Push the footer to the bottom by taking remaining space */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.heading {
+    font-size: 36px;
+    margin-bottom: 80px;
+    color: #fff;
+}
+
+.download-form {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 500px;
+    padding: 10px;
+    padding-left: 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: 1px solid #f7c9c9;
+    background-color: #33333398;
+    color: #fff;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.search-box input::placeholder {
+    color: #bbb;
+}
+
+.options {
+    margin: 20px 0;
+}
+
+.options label {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.btn-download {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 120px;
+}
+
+.btn-download:hover {
+    background-color: #a80000;
+}
+
+.progress-bar-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #333;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 20px;
+    margin-bottom: 100px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: rgb(237,121,182);
+    background: linear-gradient(90deg, rgba(237,121,182,1) 0%, rgba(255,0,23,1) 100%);
+    transition: width 0.4s ease;
+    
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+}
+
+.info-left {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.info-left h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.info-left p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.info-right {
+    flex: 1;
+    text-align: center;
+}
+
+.info-right img {
+    width: auto;
+    height: 300px;
+    rotate: 40deg;
+}
+
+footer {
+    text-align: center;
+    background-color: #1e1e1e3f;
+    padding: 20px;
+    color: #fff;
+    font-size: 14px;
+}

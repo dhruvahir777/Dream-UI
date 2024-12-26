@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Complete</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-image: url('{{ url_for("static", filename="bg_homepage.png") }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        .checkmark {
+            font-size: 100px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        a.btn-back {
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 10px 30px;
+            border: none;
+            border-radius:25px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a.btn-back:hover {
+            background-color: #ff0f0f6c;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .checkmark {
+                font-size: 80px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            a.btn-back {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Success message with minimal design -->
+    <div>
+        <div class="checkmark">
+            &#10004; <!-- Green Checkmark -->
+        </div>
+        <h2>Website Downloaded Successfully!</h2>
+        <p><strong>Folder Name:</strong> {{ folder_name }}</p>
+       
+        <p>All website files and assets are saved in your specified folder.</p>
+        <!-- Button to go back to homepage -->
+        <a href="/" class="btn-back">Go Back to Homepage</a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
